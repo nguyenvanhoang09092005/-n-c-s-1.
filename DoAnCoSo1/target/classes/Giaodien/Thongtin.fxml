@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1093.0" styleClass="Panel" stylesheets="@../CSS/Style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.doancoso1.Giaodien.Thongtin">
+    <children>
+        <MenuButton layoutX="953.0" layoutY="32.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="MenuButton">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#home" text="Home" />
+                <Menu mnemonicParsing="false" onAction="#gioithieu" styleClass="menu" text="Giới Thiệu">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#lienhe" text="Liên hệ" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" styleClass="menu" text="Tra Cứu">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu1" text="Tra cứu thần số học" />
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu2" text="Tra cứu thần số học cho con" />
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu3" onMenuValidation="#tracuuDISc" text="Tra cứu DISC" />
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu4" onMenuValidation="#tracuuMBTI" text="Tra cứu MBTI" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" styleClass="menu" text="Dịch Vụ">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#danhxung" text="Đặt tên danh xưng" />
+                        <MenuItem mnemonicParsing="false" onAction="#khaisinh" text="Đặt tên khai sinh" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" styleClass="menu" text="Blog">
+                    <items>
+                        <Menu mnemonicParsing="false" styleClass="menu" text="Kiến Thức Thần Số Học">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#cacchiso" text="Cácchỉ số" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" styleClass="menu" text="Ý Nghĩa Các Con Số">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#so1" text="Thần số học số 1" />
+                                <MenuItem mnemonicParsing="false" onAction="#so2" text="Thần số học số 2" />
+                                <MenuItem mnemonicParsing="false" onAction="#so3" text="Thần số học số 3" />
+                                <MenuItem mnemonicParsing="false" onAction="#so4" text="Thần số học số 4" />
+                                <MenuItem mnemonicParsing="false" onAction="#so5" text="Thần số học số 5" />
+                                <MenuItem mnemonicParsing="false" onAction="#so6" text="Thần số học số 6" />
+                                <MenuItem mnemonicParsing="false" onAction="#so7" text="Thần số học số 7" />
+                                <MenuItem mnemonicParsing="false" onAction="#so8" text="Thần số học số 8" />
+                                <MenuItem mnemonicParsing="false" onAction="#so9" text="Thần số học số 9" />
+                                <MenuItem mnemonicParsing="false" onAction="#so10" text="Thần số học số 10" />
+                                <MenuItem mnemonicParsing="false" onAction="#so11" text="Thần số học số 11" />
+                                <MenuItem mnemonicParsing="false" onAction="#so22" text="Thần số học số 22" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" styleClass="menu" text="Cung Hoàng Đạo">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#cunghoangdao" text="12 cung hoàng đạo" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Đặt Tên">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#ynghiaten" text="Xem ý nghĩa tên" />
+                                <MenuItem mnemonicParsing="false" onAction="#dattencontrai" onMenuValidation="#tencontrai" text="Đặt tên con trai" />
+                                <MenuItem mnemonicParsing="false" onAction="#dattencongai" onMenuValidation="#tencongai" text="Đặt tên con gái" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Bói Tình Yêu">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#boity1" text="Bói tình yêu theo cung hoàng đạo" />
+                                <MenuItem mnemonicParsing="false" onAction="#boity2" text="Bói tử vi tình yêu" />
+                                <MenuItem mnemonicParsing="false" onAction="#boity3" onMenuValidation="#boidgtinhduyen" text="Bói đường tình duyên" />
+                                <MenuItem mnemonicParsing="false" onAction="#boity4" onMenuValidation="#boitybangten" text="Bói tình yêu bằng tên trên giấy" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" onMenuValidation="#DISC" text="DISC">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#nhomD" text="Nhóm tính cách D" />
+                                <MenuItem mnemonicParsing="false" onAction="#nhomI" text="Nhóm tính cách I" />
+                                <MenuItem mnemonicParsing="false" onAction="#nhomS" text="Nhóm tính cách S" />
+                                <MenuItem mnemonicParsing="false" onAction="#nhomC" text="Nhóm tính cách C" />
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+                <MenuItem mnemonicParsing="false" onAction="#thongtin" onMenuValidation="#thongtincanhan" text="Thông Tin" />
+                <SeparatorMenuItem mnemonicParsing="false" onAction="#dkdn">
+                    <content>
+                        <Hyperlink onAction="#register5" text="Đăng Ký">
+                            <graphic>
+                                <Hyperlink onAction="#login5" text="Đăng Nhập" />
+                            </graphic>
+                        </Hyperlink>
+                    </content>
+                </SeparatorMenuItem>
+                <SeparatorMenuItem mnemonicParsing="false" onAction="#tenngdung" onMenuValidation="#tennguoisd">
+                    <content>
+                        <Text fx:id="hienthiten" styleClass="Text" />
+                    </content>
+                </SeparatorMenuItem>
+            </items>
+        </MenuButton>
+        <AnchorPane layoutX="14.0" layoutY="126.0" prefHeight="580.0" prefWidth="370.0" styleClass="Panel1" stylesheets="@../CSS/Style1.css">
+            <children>
+                <Label layoutX="37.0" layoutY="283.0" prefHeight="35.0" prefWidth="78.0" text="Địa chỉ ID:" />
+            <ImageView fx:id="avatar" fitHeight="150.0" fitWidth="98.0" layoutX="136.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="hienthiid" layoutX="146.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.39999999999986" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="394.0" layoutY="126.0" onDragDetected="#ten5" prefHeight="580.0" prefWidth="686.0" styleClass="Panel2" stylesheets="@../CSS/Style1.css">
+            <children>
+                <Label layoutX="33.0" layoutY="130.0" prefHeight="35.0" prefWidth="78.0" text="Họ " />
+                <Label layoutX="340.0" layoutY="130.0" prefHeight="35.0" prefWidth="62.0" text="Tên" />
+                <Label layoutX="33.0" layoutY="189.0" prefHeight="35.0" prefWidth="78.0" text="Số Điện Thoại" />
+                <Label layoutX="340.0" layoutY="189.0" prefHeight="35.0" prefWidth="62.0" text="Biệt Danh" />
+                <Label layoutX="336.0" layoutY="248.0" prefHeight="35.0" prefWidth="70.0" text="Số Chủ Đạo" />
+                <Label layoutX="340.0" layoutY="313.0" prefHeight="35.0" prefWidth="62.0" text="Địa chỉ" />
+                <Label layoutX="38.0" layoutY="313.0" prefHeight="35.0" prefWidth="52.0" text="Email" />
+                <Label layoutX="35.0" layoutY="381.0" prefHeight="35.0" prefWidth="110.0" text="Số Lần Đăng Nhập" />
+                <Button fx:id="thaydoi5" layoutX="299.0" layoutY="502.0" mnemonicParsing="false" onAction="#thaydoi5a" text="Sửa Đổi" />
+                <Label layoutX="206.0" layoutY="14.0" prefHeight="46.0" prefWidth="331.0" text="THÔNG TIN TÀI KHOẢN">
+                    <font>
+                        <Font size="30.0" />
+                    </font>
+                </Label>
+                <Label layoutX="33.0" layoutY="248.0" prefHeight="35.0" prefWidth="62.0" text="Ngày Sinh" />
+            <Text fx:id="hienthiho" layoutX="124.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.39999999999986" />
+            <Text fx:id="hienthisdt" layoutX="124.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.39999999999986" />
+            <Text fx:id="hienthiten1" layoutX="427.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.39999999999986" />
+            <Text fx:id="hienthibietdanh" layoutX="427.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.39999999999986" />
+            <Text fx:id="hienthingaysinh" layoutX="124.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.39999999999986" />
+            <Text fx:id="hienthiemail" layoutX="124.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.39999999999986" />
+            <Text fx:id="hienthisochudao" layoutX="427.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.39999999999986" />
+            <Text fx:id="hienthidiachi" layoutX="427.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.39999999999986" />
+            <Text fx:id="hienthisolandangnhap" layoutX="201.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="110.39999999999998" />
+            </children></AnchorPane>
+    </children>
+</AnchorPane>
