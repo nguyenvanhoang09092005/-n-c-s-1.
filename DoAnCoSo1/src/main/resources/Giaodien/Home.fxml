@@ -1,106 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1093.0" styleClass="Panel" stylesheets="@../CSS/Style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.doancoso1.Giaodien.Home">
+<AnchorPane prefHeight="730.0" prefWidth="1093.0" styleClass="Panel" stylesheets="@../CSS/Style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.doancoso1.Giaodien.Home">
     <children>
-      <MenuButton layoutX="1036.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="42.0" stylesheets="@../CSS/Style1.css">
-        <items>
-          <MenuItem mnemonicParsing="false" onAction="#home" styleClass="menu1" text="Home" />
-            <Menu mnemonicParsing="false" onAction="#gioithieu" styleClass="menu1" text="Giới Thiệu">
+      <AnchorPane prefHeight="30.0" prefWidth="1094.0" styleClass="head" stylesheets="@../CSS/Style.css">
+         <children>
+            <MenuButton layoutX="1037.0" layoutY="5.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="42.0">
               <items>
-                <MenuItem mnemonicParsing="false" onAction="#lienhe" styleClass="menu2" text="Liên hệ" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" styleClass="menu1" text="Tra Cứu">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#tracuu1" styleClass="menu2" text="Tra cứu thần số học" />
-                  <MenuItem mnemonicParsing="false" onAction="#tracuu2" styleClass="menu2" text="Tra cứu thần số học cho con" />
-                  <MenuItem mnemonicParsing="false" onAction="#tracuu3" onMenuValidation="#tracuuDISc" styleClass="menu2" text="Tra cứu DISC" />
-                  <MenuItem mnemonicParsing="false" onAction="#tracuu4" onMenuValidation="#tracuuMBTI" styleClass="menu2" text="Tra cứu MBTI" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" styleClass="menu1" text="Dịch Vụ">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#danhxung" styleClass="menu2" text="Đặt tên danh xưng" />
-                  <MenuItem mnemonicParsing="false" onAction="#khaisinh" styleClass="menu2" text="Đặt tên khai sinh" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" styleClass="menu1" text="Blog">
-              <items>
-                  <Menu mnemonicParsing="false" styleClass="menu2" text="Kiến Thức Thần Số Học">
+                <MenuItem mnemonicParsing="false" onAction="#home" text="Home" />
+                  <Menu mnemonicParsing="false" onAction="#gioithieu" styleClass="menu1" text="Giới Thiệu">
                     <items>
-                      <MenuItem mnemonicParsing="false" onAction="#cacchiso" text="Cácchỉ số" />
+                      <MenuItem mnemonicParsing="false" onAction="#lienhe" styleClass="menu2" text="Liên hệ" />
                     </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" styleClass="menu2" text="Ý Nghĩa Các Con Số">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#so1" styleClass="menu3" text="Thần số học số 1" />
-                        <MenuItem mnemonicParsing="false" onAction="#so2" styleClass="menu3" text="Thần số học số 2" />
-                        <MenuItem mnemonicParsing="false" onAction="#so3" styleClass="menu3" text="Thần số học số 3" />
-                        <MenuItem mnemonicParsing="false" onAction="#so4" styleClass="menu3" text="Thần số học số 4" />
-                        <MenuItem mnemonicParsing="false" onAction="#so5" styleClass="menu3" text="Thần số học số 5" />
-                        <MenuItem mnemonicParsing="false" onAction="#so6" styleClass="menu3" text="Thần số học số 6" />
-                        <MenuItem mnemonicParsing="false" onAction="#so7" styleClass="menu3" text="Thần số học số 7" />
-                        <MenuItem mnemonicParsing="false" onAction="#so8" styleClass="menu3" text="Thần số học số 8" />
-                        <MenuItem mnemonicParsing="false" onAction="#so9" styleClass="menu3" text="Thần số học số 9" />
-                        <MenuItem mnemonicParsing="false" onAction="#so10" styleClass="menu3" text="Thần số học số 10" />
-                        <MenuItem mnemonicParsing="false" onAction="#so11" styleClass="menu3" text="Thần số học số 11" />
-                        <MenuItem mnemonicParsing="false" onAction="#so22" styleClass="menu3" text="Thần số học số 22" />
-                     </items>
+                  <Menu mnemonicParsing="false" styleClass="menu1" text="Tra Cứu">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#tracuu1" styleClass="menu2" text="Tra cứu thần số học" />
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu2" styleClass="menu2" text="Tra cứu thần số học cho con" />
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu3" onMenuValidation="#tracuuDISc" styleClass="menu2" text="Tra cứu DISC" />
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu4" onMenuValidation="#tracuuMBTI" styleClass="menu2" text="Tra cứu MBTI" />
+                    </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" styleClass="menu2" text="Cung Hoàng Đạo">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#cunghoangdao" styleClass="menu3" text="12 cung hoàng đạo" />
-                     </items>
+                  <Menu mnemonicParsing="false" styleClass="menu1" text="Dịch Vụ">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#danhxung" styleClass="menu2" text="Đặt tên danh xưng" />
+                        <MenuItem mnemonicParsing="false" onAction="#khaisinh" styleClass="menu2" text="Đặt tên khai sinh" />
+                    </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" styleClass="menu2" text="Đặt Tên">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#ynghiaten" styleClass="menu3" text="Xem ý nghĩa tên" />
-                        <MenuItem mnemonicParsing="false" onAction="#dattencontrai" onMenuValidation="#tencontrai" styleClass="menu3" text="Đặt tên con trai" />
-                        <MenuItem mnemonicParsing="false" onAction="#dattencongai" onMenuValidation="#tencongai" styleClass="menu3" text="Đặt tên con gái" />
-                     </items>
+                  <Menu mnemonicParsing="false" styleClass="menu1" text="Blog">
+                    <items>
+                        <Menu mnemonicParsing="false" styleClass="menu2" text="Kiến Thức Thần Số Học">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#cacchiso" text="Cácchỉ số" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" styleClass="menu2" text="Ý Nghĩa Các Con Số">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#so1" styleClass="menu3" text="Thần số học số 1" />
+                              <MenuItem mnemonicParsing="false" onAction="#so2" styleClass="menu3" text="Thần số học số 2" />
+                              <MenuItem mnemonicParsing="false" onAction="#so3" styleClass="menu3" text="Thần số học số 3" />
+                              <MenuItem mnemonicParsing="false" onAction="#so4" styleClass="menu3" text="Thần số học số 4" />
+                              <MenuItem mnemonicParsing="false" onAction="#so5" styleClass="menu3" text="Thần số học số 5" />
+                              <MenuItem mnemonicParsing="false" onAction="#so6" styleClass="menu3" text="Thần số học số 6" />
+                              <MenuItem mnemonicParsing="false" onAction="#so7" styleClass="menu3" text="Thần số học số 7" />
+                              <MenuItem mnemonicParsing="false" onAction="#so8" styleClass="menu3" text="Thần số học số 8" />
+                              <MenuItem mnemonicParsing="false" onAction="#so9" styleClass="menu3" text="Thần số học số 9" />
+                              <MenuItem mnemonicParsing="false" onAction="#so10" styleClass="menu3" text="Thần số học số 10" />
+                              <MenuItem mnemonicParsing="false" onAction="#so11" styleClass="menu3" text="Thần số học số 11" />
+                              <MenuItem mnemonicParsing="false" onAction="#so22" styleClass="menu3" text="Thần số học số 22" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" styleClass="menu2" text="Cung Hoàng Đạo">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#cunghoangdao" styleClass="menu3" text="12 cung hoàng đạo" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" styleClass="menu2" text="Đặt Tên">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#ynghiaten" styleClass="menu3" text="Xem ý nghĩa tên" />
+                              <MenuItem mnemonicParsing="false" onAction="#dattencontrai" onMenuValidation="#tencontrai" styleClass="menu3" text="Đặt tên con trai" />
+                              <MenuItem mnemonicParsing="false" onAction="#dattencongai" onMenuValidation="#tencongai" styleClass="menu3" text="Đặt tên con gái" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" styleClass="menu2" text="Bói Tình Yêu">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#boity1" styleClass="menu3" text="Bói tình yêu theo cung hoàng đạo" />
+                              <MenuItem mnemonicParsing="false" onAction="#boity2" styleClass="menu3" text="Bói tử vi tình yêu" />
+                              <MenuItem mnemonicParsing="false" onAction="#boity3" onMenuValidation="#boidgtinhduyen" styleClass="menu3" text="Bói đường tình duyên" />
+                              <MenuItem mnemonicParsing="false" onAction="#boity4" onMenuValidation="#boitybangten" styleClass="menu3" text="Bói tình yêu bằng tên trên giấy" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" onMenuValidation="#DISC" styleClass="menu2" text="DISC">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#nhomD" styleClass="menu3" text="Nhóm tính cách D" />
+                              <MenuItem mnemonicParsing="false" onAction="#nhomI" styleClass="menu3" text="Nhóm tính cách I" />
+                              <MenuItem mnemonicParsing="false" onAction="#nhomS" styleClass="menu3" text="Nhóm tính cách S" />
+                              <MenuItem mnemonicParsing="false" onAction="#nhomC" styleClass="menu3" text="Nhóm tính cách C" />
+                           </items>
+                        </Menu>
+                    </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" styleClass="menu2" text="Bói Tình Yêu">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#boity1" styleClass="menu3" text="Bói tình yêu theo cung hoàng đạo" />
-                        <MenuItem mnemonicParsing="false" onAction="#boity2" styleClass="menu3" text="Bói tử vi tình yêu" />
-                        <MenuItem mnemonicParsing="false" onAction="#boity3" onMenuValidation="#boidgtinhduyen" styleClass="menu3" text="Bói đường tình duyên" />
-                        <MenuItem mnemonicParsing="false" onAction="#boity4" onMenuValidation="#boitybangten" styleClass="menu3" text="Bói tình yêu bằng tên trên giấy" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" onMenuValidation="#DISC" styleClass="menu2" text="DISC">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#nhomD" styleClass="menu3" text="Nhóm tính cách D" />
-                        <MenuItem mnemonicParsing="false" onAction="#nhomI" styleClass="menu3" text="Nhóm tính cách I" />
-                        <MenuItem mnemonicParsing="false" onAction="#nhomS" styleClass="menu3" text="Nhóm tính cách S" />
-                        <MenuItem mnemonicParsing="false" onAction="#nhomC" styleClass="menu3" text="Nhóm tính cách C" />
-                     </items>
-                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#thongtin" onMenuValidation="#thongtincanhan" styleClass="menu1" text="Thông Tin" />
+                  <SeparatorMenuItem mnemonicParsing="false" onAction="#dkdn" styleClass="menu1">
+                     <content>
+                        <Hyperlink onAction="#register5" text="Đăng Ký">
+                           <graphic>
+                              <Hyperlink onAction="#login5" text="Đăng Nhập" />
+                           </graphic>
+                        </Hyperlink>
+                     </content>
+                  </SeparatorMenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" onAction="#tenngdung" onMenuValidation="#tennguoisd" styleClass="menu1">
+                     <content>
+                        <Label fx:id="hienthiten" />
+                     </content>
+                  </SeparatorMenuItem>
               </items>
-            </Menu>
-            <MenuItem mnemonicParsing="false" onAction="#thongtin" onMenuValidation="#thongtincanhan" styleClass="menu1" text="Thông Tin" />
-            <SeparatorMenuItem mnemonicParsing="false" onAction="#dkdn" styleClass="menu1">
-               <content>
-                  <Hyperlink onAction="#register5" text="Đăng Ký">
-                     <graphic>
-                        <Hyperlink onAction="#login5" text="Đăng Nhập" />
-                     </graphic>
-                  </Hyperlink>
-               </content>
-            </SeparatorMenuItem>
-            <SeparatorMenuItem mnemonicParsing="false" onAction="#tenngdung" onMenuValidation="#tennguoisd" styleClass="menu1">
-               <content>
-                  <Label fx:id="hienthiten" />
-               </content>
-            </SeparatorMenuItem>
-        </items>
-      </MenuButton>
+               <stylesheets>
+                  <URL value="@../CSS/Style1.css" />
+                  <URL value="@../CSS/Style.css" />
+               </stylesheets>
+            </MenuButton>
+            <ImageView fitHeight="34.0" fitWidth="200.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="V_RESIZE" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+               <image>
+                  <Image url="@../../../../../anhdownload/z5407069260900_daec09f09cd7ef68b47cf61cf08089e8.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutY="38.0" prefHeight="703.0" prefWidth="1093.0">
+         <content>
+            <AnchorPane prefHeight="3000.0" prefWidth="1093.0">
+               <children>
+                  <ImageView fitHeight="683.0" fitWidth="1093.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../anhdownload/hinh-nen-vu-tru-13.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
     </children>
 </AnchorPane>

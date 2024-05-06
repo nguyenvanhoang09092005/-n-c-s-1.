@@ -59,4 +59,32 @@
     -fx-border-width: 1px;
 }
 
+.head {
+    -fx-background-color: linear-gradient(to bottom, #4B0082, rgba(0, 0, 0, 0.7)); /* Gradient từ màu tím đến màu đen với độ trong suốt */
+}
+
+/* Trong file CSS của ứng dụng JavaFX */
+
+.menu-item {
+    /* Đặt chiều cao của menu bar */
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    /* Đặt ảnh làm nền */
+    -fx-background-image: url('https://tracuuthansohoc.com/wp-content/themes/devvn-child/images/bg_mobile_menu.jpg');
+    /* Đặt kích thước và kiểu căn chỉnh cho hình nền */
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    /* Xóa padding để ảnh nền chiếm toàn bộ không gian của menu */
+    -fx-padding: 0;
+}
+
+/* Thiết lập các tính chất cho các menu items (tuỳ chọn) */
+.menu-item {
+    /* Thêm màu chữ */
+    -fx-text-fill: white;
+    /* Thêm padding */
+    -fx-padding: 5 10;
+}
+
+
 
