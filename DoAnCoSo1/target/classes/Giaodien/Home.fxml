@@ -1,39 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1093.0" styleClass="Panel" stylesheets="@../CSS/Style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.doancoso1.Giaodien.Home">
+<AnchorPane prefHeight="730.0" prefWidth="1093.0" styleClass="Panel" stylesheets="@../CSS/Style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.doancoso1.Giaodien.Home">
     <children>
-      <MenuButton layoutX="1036.0" layoutY="14.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="42.0" stylesheets="@../CSS/Style1.css">
-        <items>
-          <MenuItem mnemonicParsing="false" onAction="#home" styleClass="menu1" text="Home" />
-            <Menu mnemonicParsing="false" onAction="#gioithieu" styleClass="menu1" text="Giới Thiệu">
+      <AnchorPane prefHeight="30.0" prefWidth="1094.0" styleClass="head" stylesheets="@../CSS/Style.css">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="200.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="V_RESIZE" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+               <image>
+                  <Image url="@../../../../../anhdownload/z5407069260900_daec09f09cd7ef68b47cf61cf08089e8.jpg" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="351.0" layoutY="3.0" onAction="#home" text="Home" textFill="#101010">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <MenuButton id="menu" layoutX="420.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Giới thiệu">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#lienhe" styleClass="menu2" text="Liên hệ" />
               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" styleClass="menu1" text="Tra Cứu">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <MenuButton id="menu" layoutX="547.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Tra cứu">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#tracuu1" styleClass="menu2" text="Tra cứu thần số học" />
                   <MenuItem mnemonicParsing="false" onAction="#tracuu2" styleClass="menu2" text="Tra cứu thần số học cho con" />
                   <MenuItem mnemonicParsing="false" onAction="#tracuu3" onMenuValidation="#tracuuDISc" styleClass="menu2" text="Tra cứu DISC" />
                   <MenuItem mnemonicParsing="false" onAction="#tracuu4" onMenuValidation="#tracuuMBTI" styleClass="menu2" text="Tra cứu MBTI" />
               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" styleClass="menu1" text="Dịch Vụ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <MenuButton id="menu" layoutX="657.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Dịch vụ">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#danhxung" styleClass="menu2" text="Đặt tên danh xưng" />
                   <MenuItem mnemonicParsing="false" onAction="#khaisinh" styleClass="menu2" text="Đặt tên khai sinh" />
               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" styleClass="menu1" text="Blog">
-              <items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <MenuButton id="menu" layoutX="760.0" layoutY="-1.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Blog">
+               <items>
                   <Menu mnemonicParsing="false" styleClass="menu2" text="Kiến Thức Thần Số Học">
                     <items>
                       <MenuItem mnemonicParsing="false" onAction="#cacchiso" text="Cácchỉ số" />
@@ -83,24 +111,36 @@
                         <MenuItem mnemonicParsing="false" onAction="#nhomC" styleClass="menu3" text="Nhóm tính cách C" />
                      </items>
                   </Menu>
-              </items>
-            </Menu>
-            <MenuItem mnemonicParsing="false" onAction="#thongtin" onMenuValidation="#thongtincanhan" styleClass="menu1" text="Thông Tin" />
-            <SeparatorMenuItem mnemonicParsing="false" onAction="#dkdn" styleClass="menu1">
-               <content>
-                  <Hyperlink onAction="#register5" text="Đăng Ký">
-                     <graphic>
-                        <Hyperlink onAction="#login5" text="Đăng Nhập" />
-                     </graphic>
-                  </Hyperlink>
-               </content>
-            </SeparatorMenuItem>
-            <SeparatorMenuItem mnemonicParsing="false" onAction="#tenngdung" onMenuValidation="#tennguoisd" styleClass="menu1">
-               <content>
-                  <Label fx:id="hienthiten" />
-               </content>
-            </SeparatorMenuItem>
-        </items>
-      </MenuButton>
+               </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <Hyperlink fx:id="thongtin1" layoutX="846.0" layoutY="2.0" onAction="#thongtin" text="Thông tin" textFill="#1b1a1a">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="dangky" layoutX="945.0" layoutY="3.0" onAction="#register5" text="Đăng Ký">
+               <graphic>
+                  <Hyperlink fx:id="dangnhap" onAction="#login5" text="Đăng Nhập" />
+               </graphic>
+            </Hyperlink>
+            <Hyperlink fx:id="dangxuat1" layoutX="989.0" layoutY="8.0" onAction="#dangxuat" text="Đăng Xuất" />
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutY="38.0" prefHeight="703.0" prefWidth="1093.0">
+         <content>
+            <AnchorPane prefHeight="3000.0" prefWidth="1093.0">
+               <children>
+                  <ImageView fitHeight="683.0" fitWidth="1093.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../anhdownload/hinh-nen-vu-tru-13.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
     </children>
 </AnchorPane>

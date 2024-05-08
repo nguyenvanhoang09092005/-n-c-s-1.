@@ -22,6 +22,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class Register implements Initializable {
@@ -87,6 +88,7 @@ public class Register implements Initializable {
         }
     }
     
+    
     @FXML
     void Register(ActionEvent event) {
         try (Connection connection = DatabaseConnection.getConnection()) {
@@ -96,7 +98,6 @@ public class Register implements Initializable {
             String emailValue = email.getText();
             String mkValue = matkhau.getText();
             
-           
             if (ho.getText().isEmpty() || ten.getText().isEmpty() || email.getText().isEmpty() || matkhau.getText().isEmpty()) {
                 showAlert("Lỗi", "Vui lòng điền đầy đủ thông tin!");
                 return;
@@ -112,7 +113,6 @@ public class Register implements Initializable {
                 return;
             }
             
-            // Kiểm tra chiều dài của số điện thoại
             if (sodienthoaiNumber.length() != 10) {
                 showAlert("Lỗi", "Số điện thoại của bạn đang sai, vui lòng kiểm tra lại!");
                 return;
@@ -139,7 +139,6 @@ public class Register implements Initializable {
                 return;
             }
             
-            // Kiểm tra số điện thoại đã tồn tại trong cơ sở dữ liệu
             String checkPhoneQuery = "SELECT * FROM user WHERE sodienthoai = ?";
             PreparedStatement checkPhoneStatement = connection.prepareStatement(checkPhoneQuery);
             checkPhoneStatement.setString(1, sodienthoaiNumber);
@@ -149,7 +148,6 @@ public class Register implements Initializable {
                 return;
             }
             
-           
             String checkEmail = "SELECT * FROM user WHERE email = ?";
             PreparedStatement checkEmailStatement = connection.prepareStatement(checkEmail);
             checkEmailStatement.setString(1,emailValue);
@@ -168,41 +166,32 @@ public class Register implements Initializable {
                 return;
             }
             
-            // Thêm tài khoản vào cơ sở dữ liệu
-            String insertQuery = "INSERT INTO user (sodienthoai, ho, ten, email, matkhau) VALUES (?, ?, ?, ?, ?)";
+            String userID = generateRandomID();
+            String insertQuery = "INSERT INTO user (id, sodienthoai, ho, ten, email, matkhau) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
-            preparedStatement.setString(1, sodienthoaiNumber);
-            preparedStatement.setString(2, ho.getText());
-            preparedStatement.setString(3, ten.getText());
-            preparedStatement.setString(4, email.getText());
-            preparedStatement.setString(5, matkhau.getText());
+            preparedStatement.setString(1, userID);
+            preparedStatement.setString(2, sodienthoaiNumber);
+            preparedStatement.setString(3, ho.getText());
+            preparedStatement.setString(4, ten.getText());
+            preparedStatement.setString(5, email.getText());
+            preparedStatement.setString(6, matkhau.getText());
             
             int rowsInserted = preparedStatement.executeUpdate();
             if (rowsInserted > 0) {
-                // Hiển thị thông báo Thông tin với biểu tượng dấu tích
                 Alert successAlert = new Alert(Alert.AlertType.INFORMATION);
                 successAlert.setTitle("Thông báo");
                 successAlert.setHeaderText(null);
                 successAlert.setContentText("Tạo tài khoản thành công! Vui lòng đăng nhập.");
-                
-                // Thêm biểu tượng dấu tích vào danh sách các nút của thông báo
                 successAlert.getButtonTypes().setAll(ButtonType.OK);
-                
-                // Hiển thị và chờ người dùng xác nhận
                 successAlert.showAndWait();
                 
-                // Đóng cửa sổ đăng ký và mở cửa sổ đăng nhập
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Login.fxml"));
                 Parent root = loader.load();
-                
                 Stage stage = new Stage();
                 stage.setTitle("Đăng nhập");
-                
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
-                
                 stage.show();
-                
                 Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 currentStage.close();
             }
@@ -210,7 +199,17 @@ public class Register implements Initializable {
             e.printStackTrace();
             showAlert("Lỗi", "Đã xảy ra lỗi khi tạo tài khoản. Vui lòng thử lại sau!");
         }
-        
+    }
+    
+    private String generateRandomID() {
+        Random random = new Random();
+        StringBuilder stringBuilder = new StringBuilder();
+        char capitalLetter = (char) (random.nextInt(26) + 'A');
+        stringBuilder.append(capitalLetter);
+        for (int i = 0; i < 11; i++) {
+            stringBuilder.append(random.nextInt(10));
+        }
+        return stringBuilder.toString();
     }
     
     private boolean isStrongPassword(String password) {

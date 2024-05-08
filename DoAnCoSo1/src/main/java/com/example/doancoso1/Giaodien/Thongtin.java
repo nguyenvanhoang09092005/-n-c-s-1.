@@ -5,8 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -15,6 +17,7 @@ import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Popup;
 import javafx.stage.Stage;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -45,7 +48,9 @@ public class Thongtin {
 	
 	@FXML
 	private Text hienthisdt;
-	
+	public void setSodienthoai(String sodienthoai) {
+		hienthisdt.setText(sodienthoai);
+	}
 	@FXML
 	private Text hienthisochudao;
 	
@@ -58,6 +63,11 @@ public class Thongtin {
 	
 	@FXML
 	private Button thaydoi5;
+	
+	
+	@FXML
+	private MenuButton menuButton;
+
 	
 	
 	
@@ -155,13 +165,30 @@ public class Thongtin {
 	void ho5(MouseEvent event) {
 	
 	}
-	
+
 	@FXML
 	void home(ActionEvent event) {
-	
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Home.fxml"));
+			Parent root = loader.load();
+
+			Stage stage = new Stage();
+			stage.setTitle("Đăng nhập");
+
+			Scene scene = new Scene(root);
+			stage.setScene(scene);
+
+			stage.show();
+
+			Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			currentStage.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-	
-	
+
+
+
 	@FXML
 	void id(MouseEvent event) {
 	
@@ -181,12 +208,30 @@ public class Thongtin {
 	void lienhe(ActionEvent event) {
 	
 	}
-	
+
 	@FXML
 	void login5(ActionEvent event) {
-	
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Login.fxml"));
+			Parent root = loader.load();
+
+			Stage stage = new Stage();
+			stage.setTitle("Đăng nhập");
+
+			Scene scene = new Scene(root);
+			stage.setScene(scene);
+
+			stage.show();
+
+			// Đóng cửa sổ hiện tại
+			Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			currentStage.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-	
+
+
 	@FXML
 	void ngaysinh(ActionEvent event) {
 	
@@ -214,8 +259,26 @@ public class Thongtin {
 	
 	@FXML
 	void register5(ActionEvent event) {
-	
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/Register.fxml"));
+			Parent root = loader.load();
+
+			Stage stage = new Stage();
+			stage.setTitle("Đăng Ký");
+
+			Scene scene = new Scene(root);
+			stage.setScene(scene);
+
+			stage.show();
+
+			// Đóng cửa sổ hiện tại
+			Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			currentStage.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
+	
 	
 	@FXML
 	void sdt5(MouseEvent event) {
@@ -317,18 +380,18 @@ public class Thongtin {
 	@FXML
 	void thaydoi5a(ActionEvent event) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/doancoso1/Giaodien/thongtin1.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/Giaodien/Thongtin1.fxml"));
 			Parent root = loader.load();
-			
-			// Tạo một Popup
-			Popup popup = new Popup();
-			popup.getContent().add(root);
-			popup.setAutoHide(true); // Tự động ẩn Popup khi click ra ngoài
-			popup.show(((Node) event.getSource()).getScene().getWindow());
+			Scene newScene = new Scene(root);
+			Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
+			currentStage.setScene(newScene);
+			currentStage.show();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
+
+
 	
 	
 	@FXML
@@ -377,5 +440,5 @@ public class Thongtin {
 	void ynghiaten(ActionEvent event) {
 	
 	}
-	
+
 }

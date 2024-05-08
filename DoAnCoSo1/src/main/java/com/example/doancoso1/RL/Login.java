@@ -1,5 +1,6 @@
 package com.example.doancoso1.RL;
 
+import com.example.doancoso1.Giaodien.Thongtin;
 import com.example.doancoso1.JDBC.DatabaseConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,6 +20,12 @@ import java.io.IOException;
 
 
 public class Login {
+    
+    private String sodienthoai;
+    
+    public void setSodienthoai(String sodienthoai) {
+        this.sodienthoai = sodienthoai;
+    }
     
     @FXML
     private CheckBox Check;
@@ -52,7 +59,7 @@ public class Login {
     
     
     @FXML
-    void Login1(ActionEvent event) {
+    void Login1(ActionEvent event) throws IOException {
         String sodienthoai = sodienthoai1.getText();
         String email = email1.getText();
         String matkhau = matkhau1.getText();
@@ -87,6 +94,11 @@ public class Login {
             alert.setContentText("Số điện thoại, Email hoặc Mật khẩu không đúng. Vui lòng thử lại!");
             alert.showAndWait();
         }
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Giaodien/Thongtin.fxml"));
+        Parent root = loader.load();
+        Thongtin controller = loader.getController();
+        controller.setSodienthoai(sodienthoai);
     }
     
     
