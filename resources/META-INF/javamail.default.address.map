@@ -1,0 +1,5 @@
+# javamail.default.address.map
+
+# Default address type mappings
+# Define default mappings for addresses that do not have explicit type
+# mapping definitions.

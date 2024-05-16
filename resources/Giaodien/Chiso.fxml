@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1093.0" styleClass="Panel" stylesheets="@../CSS/Style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.doancoso1.Giaodien.Chiso">
+    <children>
+        <AnchorPane prefHeight="30.0" prefWidth="1094.0" styleClass="head" stylesheets="@../CSS/Style.css">
+            <children>
+                <ImageView fitHeight="34.0" fitWidth="200.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                    <cursor>
+                        <Cursor fx:constant="V_RESIZE" />
+                    </cursor>
+                    <effect>
+                        <Blend />
+                    </effect>
+                    <image>
+                        <Image url="@../../../../../anhdownload/z5407069260900_daec09f09cd7ef68b47cf61cf08089e8.jpg" />
+                    </image>
+                </ImageView>
+                <Hyperlink layoutX="387.0" layoutY="3.0" onAction="#home" text="Home" textFill="#101010">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Hyperlink>
+                <MenuButton id="menu" layoutX="468.0" layoutY="-1.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Về">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#gioithieu" styleClass="menu2" text="Giới thiệu" />
+                        <MenuItem mnemonicParsing="false" onAction="#lienhe" styleClass="menu2" text="Liên hệ" />
+                    </items>
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </MenuButton>
+                <MenuButton id="menu" layoutX="547.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Tra cứu">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu1" styleClass="menu2" text="Tra cứu thần số học" />
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu2" styleClass="menu2" text="Tra cứu thần số học cho con" />
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu3" onMenuValidation="#tracuuDISc" styleClass="menu2" text="Tra cứu DISC" />
+                        <MenuItem mnemonicParsing="false" onAction="#tracuu4" onMenuValidation="#tracuuMBTI" styleClass="menu2" text="Tra cứu MBTI" />
+                    </items>
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </MenuButton>
+                <MenuButton id="menu" layoutX="657.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Dịch vụ">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#danhxung" styleClass="menu2" text="Đặt tên danh xưng" />
+                        <MenuItem mnemonicParsing="false" onAction="#khaisinh" styleClass="menu2" text="Đặt tên khai sinh" />
+                    </items>
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </MenuButton>
+                <MenuButton id="menu" layoutX="760.0" layoutY="-1.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Blog">
+                    <items>
+                        <Menu mnemonicParsing="false" styleClass="menu2" text="Kiến Thức Thần Số Học">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#cacchiso" text="Cácchỉ số" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" styleClass="menu2" text="Ý Nghĩa Các Con Số">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#so1" styleClass="menu3" text="Thần số học số 1" />
+                                <MenuItem mnemonicParsing="false" onAction="#so2" styleClass="menu3" text="Thần số học số 2" />
+                                <MenuItem mnemonicParsing="false" onAction="#so3" styleClass="menu3" text="Thần số học số 3" />
+                                <MenuItem mnemonicParsing="false" onAction="#so4" styleClass="menu3" text="Thần số học số 4" />
+                                <MenuItem mnemonicParsing="false" onAction="#so5" styleClass="menu3" text="Thần số học số 5" />
+                                <MenuItem mnemonicParsing="false" onAction="#so6" styleClass="menu3" text="Thần số học số 6" />
+                                <MenuItem mnemonicParsing="false" onAction="#so7" styleClass="menu3" text="Thần số học số 7" />
+                                <MenuItem mnemonicParsing="false" onAction="#so8" styleClass="menu3" text="Thần số học số 8" />
+                                <MenuItem mnemonicParsing="false" onAction="#so9" styleClass="menu3" text="Thần số học số 9" />
+                                <MenuItem mnemonicParsing="false" onAction="#so10" styleClass="menu3" text="Thần số học số 10" />
+                                <MenuItem mnemonicParsing="false" onAction="#so11" styleClass="menu3" text="Thần số học số 11" />
+                                <MenuItem mnemonicParsing="false" onAction="#so22" styleClass="menu3" text="Thần số học số 22" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" styleClass="menu2" text="Cung Hoàng Đạo">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#cunghoangdao" styleClass="menu3" text="12 cung hoàng đạo" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" styleClass="menu2" text="Đặt Tên">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#ynghiaten" styleClass="menu3" text="Xem ý nghĩa tên" />
+                                <MenuItem mnemonicParsing="false" onAction="#dattencontrai" onMenuValidation="#tencontrai" styleClass="menu3" text="Đặt tên con trai" />
+                                <MenuItem mnemonicParsing="false" onAction="#dattencongai" onMenuValidation="#tencongai" styleClass="menu3" text="Đặt tên con gái" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" styleClass="menu2" text="Bói Tình Yêu">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#boity1" styleClass="menu3" text="Bói tình yêu theo cung hoàng đạo" />
+                                <MenuItem mnemonicParsing="false" onAction="#boity2" styleClass="menu3" text="Bói tử vi tình yêu" />
+                                <MenuItem mnemonicParsing="false" onAction="#boity3" onMenuValidation="#boidgtinhduyen" styleClass="menu3" text="Bói đường tình duyên" />
+                                <MenuItem mnemonicParsing="false" onAction="#boity4" onMenuValidation="#boitybangten" styleClass="menu3" text="Bói tình yêu bằng tên trên giấy" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" onMenuValidation="#DISC" styleClass="menu2" text="DISC">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#nhomD" styleClass="menu3" text="Nhóm tính cách D" />
+                                <MenuItem mnemonicParsing="false" onAction="#nhomI" styleClass="menu3" text="Nhóm tính cách I" />
+                                <MenuItem mnemonicParsing="false" onAction="#nhomS" styleClass="menu3" text="Nhóm tính cách S" />
+                                <MenuItem mnemonicParsing="false" onAction="#nhomC" styleClass="menu3" text="Nhóm tính cách C" />
+                            </items>
+                        </Menu>
+                    </items>
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </MenuButton>
+                <Hyperlink fx:id="thongtin1" layoutX="846.0" layoutY="2.0" onAction="#thongtin" text="Thông tin" textFill="#1b1a1a">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Hyperlink>
+                <Hyperlink fx:id="dangky" layoutX="945.0" layoutY="3.0" onAction="#register5" text="Đăng Ký">
+                    <graphic>
+                        <Hyperlink fx:id="dangnhap" onAction="#login5" text="Đăng Nhập" />
+                    </graphic>
+                </Hyperlink>
+                <Hyperlink fx:id="dangxuat1" layoutX="989.0" layoutY="8.0" onAction="#dangxuat" text="Đăng Xuất" />
+            </children>
+        </AnchorPane>
+        <ScrollPane layoutY="38.0" prefHeight="703.0" prefWidth="1093.0">
+            <content>
+                <AnchorPane prefHeight="8000.0" prefWidth="1093.0">
+               <children>
+                  <Label layoutX="186.0" layoutY="39.0" text="Ý nghĩa các mũi tên trong thần số học chi tiết" textFill="#8f247b">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="417.0" layoutY="93.0" text="và cách xác định" textFill="#8f247b">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="567.0" fitWidth="964.0" layoutX="120.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../anhdownload/neu-thieu-so-3-ban-hay-tham-gia-nhieu-hon-vao-cac-hoat-dong-soi-dong.jpg" />
+                     </image>
+                  </ImageView>
+                  <Line endX="759.7999877929688" endY="-1.52587890625E-5" layoutX="216.0" layoutY="164.0" startX="-100.0" stroke="#00000049" />
+                  <Label layoutX="115.0" layoutY="147.0" text="CẬP NHẬT LẦN CUỐI 21/02/2024" textFill="#8f247b" />
+                   <Label layoutX="116.20" layoutY="790.0" text="1. Các mũi tên trong thần số học là gì? Cách xác định như thế nào?" textFill="#8f247b">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+                   </Label>
+                  <Line endX="-100.0" endY="52.99998474121094" layoutX="220.0" layoutY="830.0" startX="-100.0" stroke="#cc14b7" strokeWidth="2.5" />
+                   <Label layoutX="150.0" layoutY="832.0" text="Mũi tên trong thần số học cho thấy những điểm mạnh và điểm yếu của mỗi người để tận dụng phát ">
+                       <font>
+                           <Font size="18.0" />
+                       </font>
+                   </Label>
+                   <Label layoutX="150.0" layoutY="852.0" text="triển khả năng bản thân hoặc khắc phục điểm hạn chế để hoàn thiện hơn.">
+                       <font>
+                           <Font size="18.0" />
+                       </font>
+                   </Label>
+                   <Label layoutX="116.20" layoutY="790.0" text="1. Các mũi tên trong thần số học là gì? Cách xác định như thế nào?" textFill="#8f247b">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+                   </Label>
+                  <AnchorPane layoutX="120.0" layoutY="900.0" prefHeight="50.0" prefWidth="850.0">
+                     <children>
+                        <Label layoutY="5.0" text="Các mũi tên trong thần số học được xác định dựa vào">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="bieudongaysinh" layoutX="331.0" layoutY="2.0" text="biểu đồ ngày sinh">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Hyperlink>
+                        <Label layoutX="451.0" layoutY="5.0" text="và biểu đồ tên trong thần số học của mỗi con người. Thông qua ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                         <Label layoutY="23.5" text="những con số của ngày sinh và tên riêng mà xác định được mũi tên thần học khác nhau.">
+                             <font>
+                                 <Font size="14.0" />
+                             </font>
+                         </Label>
+                         <Label layoutY="60.0" text="Trong trường hợp người có 3 con số nằm kế tiếp với nhau theo trục dọc, trục ngang hoặc trục chéo thì sẽ tạo ra được những mũi tên cá">
+                             <font>
+                                 <Font size="14.0" />
+                             </font>
+                         </Label>
+                         <Label layoutY="80.0" text="tính chỉ ra những ưu điểm vượt trội của chính cá nhân đó. Nhưng nếu vắng mặt cả 3 con số thì đó là mũi tên chỉ ra những nhược điểm ">
+                             <font>
+                                 <Font size="14.0" />
+                             </font>
+                         </Label>
+                         <Label layoutY="100.0" text="của người đó.">
+                             <font>
+                                 <Font size="14.0" />
+                             </font>
+                         </Label>
+                         <AnchorPane layoutY="120.0" prefHeight="420.0" prefWidth="950.0">
+                             <children>
+                                 <Label layoutX="211.0" layoutY="14.0" text="Tra Cứu Các Chỉ Số Thần Số Học Của Bản Thân Ngay Tại:">
+                                     <font>
+                                         <Font name="System Bold Italic" size="18.0" />
+                                     </font>
+                                 </Label>
+                                 <Label layoutX="173.0" layoutY="59.0" text="Họ tên khai sinh (chữ thường không dấu)">
+                                     <font>
+                                         <Font name="System Bold Italic" size="14.0" />
+                                     </font>
+                                 </Label>
+                                 <TextField layoutX="467.0" layoutY="56.0" prefHeight="26.0" prefWidth="271.0" />
+                                 <Label layoutX="173.0" layoutY="91.0" text="Tên thường dùng (Nếu có)">
+                                     <font>
+                                         <Font name="System Bold Italic" size="14.0" />
+                                     </font>
+                                 </Label>
+                                 <TextField layoutX="467.0" layoutY="88.0" prefHeight="26.0" prefWidth="271.0" />
+                                 <DatePicker layoutX="467.0" layoutY="121.0" prefHeight="27.0" prefWidth="271.0" />
+                                 <Label layoutX="173.0" layoutY="125.0" text="Ngày/tháng/năm sinh dương lịch:">
+                                     <font>
+                                         <Font name="System Bold Italic" size="14.0" />
+                                     </font>
+                                 </Label>
+                                 <ComboBox layoutX="467.0" layoutY="158.0" prefHeight="26.0" prefWidth="271.0" />
+                                 <Label layoutX="173.0" layoutY="161.0" text="Giới tính">
+                                     <font>
+                                         <Font name="System Bold Italic" size="14.0" />
+                                     </font>
+                                 </Label>
+                                 <CheckBox layoutX="173.0" layoutY="208.0" mnemonicParsing="false" text="CheckBox" />
+                                 <CheckBox layoutX="173.0" layoutY="280.0" mnemonicParsing="false" text="CheckBox" />
+                                 <TextField layoutX="173.0" layoutY="244.0" />
+                                 <TextField layoutX="173.0" layoutY="313.0" />
+                                 <Button layoutX="369.0" layoutY="380.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="215.0" text="Tra cứu con số của bạn ngay" />
+                             </children>
+                         </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                   <Label layoutX="120.0" layoutY="1460.0" text="2. Tổng hợp các mũi tên trong thần số học" textFill="#8f247b">
+                       <font>
+                           <Font size="20.0" />
+                       </font>
+                   </Label>
+                   <Label layoutX="120.0" layoutY="1490.0" text="Như vậy, trong thần số học có rất nhiều các mũi tên khác nhau. Trong các trục đó được phân chia với 8 mũi tên cá tính và 7 mũi tên tiêu cực.">
+                       <font>
+                           <Font size="14.0" />
+                       </font>
+                   </Label>
+                   <Label layoutX="120.0" layoutY="1530.0" text="2.1. Mũi tên cá tính" textFill="#8f247b">
+                       <font>
+                           <Font size="19.0" />
+                       </font>
+                   </Label>
+                   <Line endX="-100.0" endY="52.99998471111194" layoutX="220.0" layoutY="1560.0" startX="-100.0" stroke="#cc14b7" strokeWidth="2.5" />
+                   <Label layoutX="150.0" layoutY="1560.0" text="Mũi tên cá tính cho thấy những thế mạnh cụ thể mà chúng ta đã và đang tận dụng để phát triển các  ">
+                       <font>
+                           <Font size="18.0" />
+                       </font>
+                   </Label>
+                   <Label layoutX="150.0" layoutY="1580.0" text="đặc điểm riêng.">
+                       <font>
+                           <Font size="18.0" />
+                       </font>
+                   </Label>
+                   <Label layoutX="120.0" layoutY="1622.0" text="Các mũi tên cá tính bao gồm: ">
+                       <font>
+                           <Font size="14.0" />
+                       </font>
+                   </Label>
+                   <AnchorPane layoutX="120.0" layoutY="1648.0" prefHeight="220.0" prefWidth="950.0">
+                       <children>
+                           <Circle fill="#0f1010" layoutX="17.0" layoutY="14.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                           <Label layoutX="38.0" layoutY="7.0" text="Mũi tên 1-4-7: Mũi tên thực tế">
+                               <font>
+                                   <Font size="14.0" />
+                               </font>
+                           </Label>
+                           <Circle fill="#0f1010" layoutX="17.0" layoutY="39.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                           <Circle fill="#0f1010" layoutX="17.0" layoutY="65.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                           <Circle fill="#0f1010" layoutX="17.0" layoutY="95.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                           <Circle fill="#0f1010" layoutX="17.0" layoutY="122.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                           <Circle fill="#0f1010" layoutX="17.0" layoutY="150.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                           <Circle fill="#0f1010" layoutX="17.0" layoutY="179.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                           <Circle fill="#0f1010" layoutX="17.0" layoutY="206.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                           <Label layoutX="38.0" layoutY="32.0" text="Mũi tên 1-2-3: Mũi tên kế hoạch">
+                               <font>
+                                   <Font size="14.0" />
+                               </font>
+                           </Label>
+                           <Label layoutX="38.0" layoutY="58.0" text="Mũi tên 2-5-8: Mũi tên cân bằng cảm xúc">
+                               <font>
+                                   <Font size="14.0" />
+                               </font>
+                           </Label>
+                           <Label layoutX="38.0" layoutY="85.0" text="Mũi tên 3-6-9: Mũi tên trí tuệ">
+                               <font>
+                                   <Font size="14.0" />
+                               </font>
+                           </Label>
+                           <Label layoutX="38.0" layoutY="115.0" text="Mũi tên 4-5-6: Mũi tên ý chí">
+                               <font>
+                                   <Font size="14.0" />
+                               </font>
+                           </Label>
+                           <Label layoutX="38.0" layoutY="140.0" text="Mũi tên 7-8-9: Mũi tên hành động">
+                               <font>
+                                   <Font size="14.0" />
+                               </font>
+                           </Label>
+                           <Label layoutX="38.0" layoutY="169.0" text="Mũi tên 3-5-7: Mũi tên nhạy bén tâm linh">
+                               <font>
+                                   <Font size="14.0" />
+                               </font>
+                           </Label>
+                           <Label layoutX="38.0" layoutY="196.0" text="Mũi tên 1-5-9: Mũi tên quyết tâm">
+                               <font>
+                                   <Font size="14.0" />
+                               </font>
+                           </Label>
+                           <AnchorPane layoutX="-10.0" layoutY="226.0" prefHeight="378.0" prefWidth="920.0">
+                               <children>
+                                   <Label layoutX="13.0" text="2.2. Mũi tên trống" textFill="#8f247b">
+                                       <font>
+                                           <Font size="19.0" />
+                                       </font>
+                                   </Label>
+                                   <Line endX="-100.00001525878906" endY="33.40000915527344" layoutX="113.0" layoutY="35.0" startX="-100.0" stroke="#ac0e87" strokeWidth="2.5" />
+                                   <Label layoutX="46.0" layoutY="38.0" text="Mũi tên trống thể hiện những điểm yếu qua đó bạn tìm cách khắc phục hoặc sử dụng thế mạnh khác để ">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="46.0" layoutY="58.0" text="che dấu. ">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="15.0" layoutY="93.0" text="Những mũi tên trống trong thần số học bao gồm:">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Circle fill="#292c2e" layoutX="31.0" layoutY="143.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle fill="#292c2e" layoutX="31.0" layoutY="172.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle fill="#292c2e" layoutX="31.0" layoutY="204.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle fill="#292c2e" layoutX="31.0" layoutY="236.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle fill="#292c2e" layoutX="31.0" layoutY="269.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle fill="#292c2e" layoutX="31.0" layoutY="304.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle fill="#292c2e" layoutX="31.0" layoutY="336.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Label layoutX="61.0" layoutY="133.0" text="Mũi tên trống 1-4-7: Mũi tên hỗn hợp.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="61.0" layoutY="162.0" text="Mũi tên trống 2-5-8: Mũi tên nhạy cảm.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="61.0" layoutY="194.0" text="Mũi tên trống 3-6-9: Mũi tên trí nhớ ngắn hạn.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="61.0" layoutY="226.0" text="Mũi tên trống 4-5-6: Mũi tên uất giận.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="61.0" layoutY="259.0" text="Mũi tên trống 7-8-9: Mũi tên thụ động.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="61.0" layoutY="294.0" text="Mũi tên trống 3-5-7: Mũi tên hoài nghi.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="61.0" layoutY="326.0" text="Mũi tên trống 1-5-9: Mũi tên trì hoãn.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Hyperlink fx:id="cachxacdinhso" layoutX="28.0" layoutY="353.0" text="Bấm vào đây" />
+                               </children>
+                           </AnchorPane>
+                           <Label layoutX="2.0" layoutY="620.0" text="Ý nghĩa các mũi tên trong Thần số học như thế nào?" textFill="#8f247b">
+                               <font>
+                                   <Font size="20.0" />
+                               </font>
+                           </Label>
+
+                           <AnchorPane fx:id="Mui_1_2_3" layoutX="-10" layoutY="660.0" prefHeight="691.0" prefWidth="920.0">
+                               <children>
+                                   <Label layoutX="14.0" layoutY="14.0" text="Mũi tên 1-2-3 (mũi tên kế hoạch)">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="58.0" text="Ý nghĩa mũi tên thần số học là gì? Mũi tên kế hoạch là mũi tên có trụ dọc, được tạo thành từ ba số 1,2,3. Những bạn có năm sinh vào những">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="78.0" text="năm 19xx hoặc 2xxx thường sẽ hội tụ đủ 3 con số này trong biểu đồ thần số học.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="116.0" text="Số 1 là đại diện cho bản thân của bạn, số 2 sẽ đại diện khả năng kết nối trực quan và số 3 sẽ đại diện cho trí nhớ tốt và khả năng phân tích">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="136.0" text="dữ liệu tuyệt vời. Cả ba yếu tố này sẽ giúp bạn có một kế hoạch đầy đủ và hoàn hảo nhất.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <ImageView fitHeight="347.0" fitWidth="499.0" layoutX="211.0" layoutY="172.0">
+                                       <image>
+                                           <Image url="@../IMG/Screenshot%202024-05-11%20204514.png" />
+                                       </image>
+                                   </ImageView>
+                                   <Label layoutX="14.0" layoutY="542.0" text="Những bạn có mũi tên kế hoạch trong biểu đồ thần số học của mình sẽ là người yêu thích sự gọn gàng, ngăn nắp. Những công việc liên quan">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="562.0" text="đến tổ chức hoặc thực hiện theo các kế hoạch. Nếu có thêm sự kết hợp của mũi tên thực tế (1-4-7) hoặc thuộc vào các số chủ đạo 4,7,10">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="582.0" text="thì chắc chắn bạn sẽ là người có kỹ năng hoạch định kế hoạch xuất sắc.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="622.0" text="Tuy nhiên, đôi khi bản thân những người có mũi tên này cũng sẽ có chút lười biếng, thường ít khi chủ động làm một việc nào đó. Nếu có thể ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="642.0" text="khắc phục được điều này, chắc chắn họ sẽ gặt hái được thêm nhiều thành công trong cuộc sống.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                               </children>
+                           </AnchorPane>
+                           <AnchorPane fx:id="Mui_1_5_9" layoutX="-10.0" layoutY="1342.0" prefHeight="598.0" prefWidth="920.0">
+                               <children>
+                                   <Label layoutX="14.0" layoutY="14.0" text="Mũi tên 1-5-9 (mũi tên quyết tâm – mũi tên trống trì hoãn)">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="58.0" text="Mũi tên quyết tâm hoặc mũi tên trống trì hoãn được tạo bởi số 1-5-9, là đường chéo xuất phát từ góc trái hướng lên trên góc phải trong ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="78.0" text="biểu đồ thần số học. Mũi tên này luôn có trong biểu đồ của những bạn sinh năm 19xx. Đây là mũi tên cho thấy bạn là người cực kỳ kiên ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="98.0" text="trì và nhẫn nại với mọi sự việc diễn ra trong cuộc sống của mình.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <ImageView fitHeight="347.0" fitWidth="499.0" layoutX="201.0" layoutY="136.0">
+                                       <image>
+                                           <Image url="@../IMG/Screenshot%202024-05-11%20210035.png" />
+                                       </image>
+                                   </ImageView>
+                                   <Label layoutX="14.0" layoutY="512.0" text="Trong trường hợp bạn bị trống 3 con số này, chúng sẽ tạo thành mũi tên trống trì hoãn. Điều này sẽ cho thấy điều mà bạn đang thiếu">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="532.0" text="chính là quyết tâm. Bạn thường hay tìm lý do để trì hoãn, có thái độ chần chừ, ỷ lại, đôi khi thiếu kiên định khiến bạn đánh mất đi">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="552.0" text="cơ hội của mình.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                               </children>
+                           </AnchorPane>
+                           <AnchorPane fx:id="Mui_3_5_7" layoutX="-10.0" layoutY="1930.0" prefHeight="280.0" prefWidth="920.0">
+                               <children>
+                                   <Label layoutX="14.0" layoutY="14.0" text="Mũi tên 3-5-7 (mũi tên nhạy bén – mũi tên trống hoài nghi)">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="58.0" text="Mũi tên nhạy bén tạo bởi 3 – 5 – 7 là một mũi tên tốt nhưng chúng lại rất ít khi xuất hiện trong biểu đồ thần số học. Những người có được ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="78.0" text="mũi tên này sẽ có sự nhạy cảm đặc biệt trong thế giới tâm linh, mức độ của sự nhạy cảm này cũng sẽ phụ thuộc vào những con số khác ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="98.0" text="có trên biểu đồ.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="131.0" text="Mũi tên thần số học này được tạo thành khi biểu đồ thần số học của bạn có số 3 ở góc trên bên trái và số 7 nằm ở góc dưới bên phải. Điều">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="151.0" text="đặc biệt khi xuất hiện mũi tên này trong biểu đồ là bạn sẽ không có bất kỳ mũi tên trống nào. Đặc điểm tính cách của những con người này">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="171.0" text="là họ sẽ có xu hướng tự dấn thân vào trải nghiệm để rút ra bài học cho riêng mình hơn là việc lắng nghe lời khuyên của mọi người.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="204.0" text="Nếu thiếu cả 3 số này, mũi tên trống hoài nghi sẽ xuất hiện trong biểu đồ thần số học của bạn. Điều này khiến bạn hay có những hoài nghi">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="224.0" text="về cuộc sống, luôn có thái độ lạnh lùng với thế giới bên ngoài. Bạn thích đi sâu vào nghiên cứu, phân tích từng chi tiết nhỉỏ trong cuộc sống">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="244.0" text="khiến bạn cảm thấy thêm mệt mỏi hơn. Thêm vào đó, bạn cũng thường không tin vào tâm linh mà chỉ tin vào những gì mình tìm hiểu được.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                               </children>
+                           </AnchorPane>
+                           <AnchorPane fx:id="Mui_3_6_9" layoutX="-10.0" layoutY="2210.0" prefHeight="596.0" prefWidth="920.0">
+                               <children>
+                                   <Label layoutX="14.0" layoutY="14.0" text="Mũi tên 3-6-9 (mũi tên trí tuệ – mũi tên trống trí nhớ ngắn hạn)">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="58.0" text="Ý nghĩa các mũi tên thần số học là gì? Ít xuất hiện hơn cả mũi tên nhạy bén là mũi tên trí tuệ, vì thế, nếu bạn may mắn sở hữu được mũi tên">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="78.0" text="này sẽ là một lợi thế cực kỳ lớn về mặt tư duy và khả năng ghi nhớ. Với những vấn đề liên quan đến những kiến thức về toán học, bạn sẽ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="98.0" text="bộc lộ được sự nhanh trí của mình bởi vì bạn ưu thích lĩnh vực này hơn là thẩm mỹ.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="468.0" text="Tuy vậy, mũi tên thần số học này cũng có điểm yếu là hay đa sầu, đa cảm, đôi khi họ cũng trong trạng thái trịch thượng. Vì thế,hãy cố gắng">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="522.0" text="Ngược lại, nếu bạn có mũi tên trống ở 3 số này, bạn sẽ có gặp chút vấn đề về khả năng ghi nhớ của bản thân. Bạn khó có thể nhớ được ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="488.0" text="hạn chế khuyết điểm này để cải thiện những điều tiêu cực của bản thân bạn.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="562.0" text="chứng suy giảm trí nhớ.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="542.0" text="điều gì lâu dẫn tới khả năng sáng tạo và ý tưởng của bạn cũng khá khiêm tốn. Như vậy, khi ở độ tuổi trung niên trở lên bạn sẽ dễ gặp phải ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <ImageView fitHeight="310.0" fitWidth="545.0" layoutX="163.0" layoutY="137.0">
+                                       <image>
+                                           <Image url="@../IMG/Screenshot%202024-05-11%20211831.png" />
+                                       </image>
+                                   </ImageView>
+                               </children>
+                           </AnchorPane>
+                           <AnchorPane fx:id="Mui_2_5_8" layoutX="-10.0" layoutY="2804.0" prefHeight="237.0" prefWidth="920.0">
+                               <children>
+                                   <Label layoutX="14.0" layoutY="14.0" text="Mũi tên 2-5-8 (mũi tên cân bằng cảm xúc – mũi tên trống nhạy cảm)">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="58.0" text="Mũi tên thần số học này đại diện cho sự cân bằng cảm xúc sẽ nằm ở hàng giữa của biểu đồ thần số học. Với khả năng cân bằng cảm xúc,">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="78.0" text="bạn sẽ sở hữu cho mình những phong thái khác nhau trong từng tình huống. Khả năng này giúp bạn cần bằng mọi việc diễn ra, nhận thức ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="98.0" text="sâu sắc về các giá trị tinh thần và cả tâm linh.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="128.0" text="Bên cạnh đó, khả năng này cũng có thể giúp bạn phát triển bản thân trong lĩnh vực nghệ thuật. Tuy nhiên năng lực này cũng cần bạn kiểm">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="178.0" text="Mũi tên trống ở những con số này sẽ khiến bạn trở thành một người nhạy cảm, cực kỳ mong manh được che giấu bởi sự bướng bỉnh và bất ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="148.0" text="soát để tránh bản thân bị lạc lối và mất phương hướng trong cuộc sống.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="198.0" text="cần. Bạn sẽ luôn trong trạng thái bất an và dễ bị tổn thương hơn những người khác.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                               </children>
+                           </AnchorPane>
+                           <AnchorPane fx:id="Mui_1_4_7" layoutX="-10.0" layoutY="3039.0" prefHeight="578.0" prefWidth="920.0">
+                               <children>
+                                   <Label layoutX="14.0" layoutY="14.0" text="Mũi tên 1-4-7 (mũi tên thực tế – mũi tên trống hỗn độn)">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="58.0" text="Mũi tên thần số học – Mũi tên thực tế nằm trên trục ngang của biểu đồ thần số học, cho thấy bạn là một người tháo vát và giỏi giang trong ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="78.0" text="trong nhiều lĩnh vực. Trong công việc, bạn sẽ cảm thấy vui vẻ khi mình được tham gia cống hiến bản thân. Những người có đôi tay khéo léo ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="98.0" text="và cực kỳ khôn ngoan.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="468.0" text="Bên cạnh đó, những người có mũi tên này còn là người tử tế và luôn sẵn sàng giúp đỡ mọi người khi gặp hoàn cảnh khó khăn. Những đôi">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="522.0" text="Nếu ở những ô này không có số nào, mũi tên được tạo thành sẽ là mũi tên trống hỗn độn. Trong trường hợp này, tức là bạn thiếu khả năng">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="488.0" text="khi, họ cũng có nhược điểm là thiếu sự chính xác khi đánh giá người khác.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="542.0" text="tổ chức, lên kế hoạch. Trạng thái hỗn loạn sẽ khiến bạn thiếu kiên nhẫn và không biết cách chăm sóc cuộc sống.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <ImageView fitHeight="310.0" fitWidth="545.0" layoutX="163.0" layoutY="137.0">
+                                       <image>
+                                           <Image url="@../../../../../anhdownload/Screenshot%202024-05-13%20155348.png" />
+                                       </image>
+                                   </ImageView>
+                               </children>
+                           </AnchorPane>
+                           <AnchorPane fx:id="Mui_4_5_6" layoutX="-10.0" layoutY="3615.0" prefHeight="216.0" prefWidth="920.0">
+                               <children>
+                                   <Label layoutX="14.0" layoutY="14.0" text="Mũi tên 4-5-6 (mũi tên ý chí – mũi tên trống uất hận)">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="58.0" text="Mũi tên thần số học – Mũi tên ý chí cũng là một trong các mũi tên trong thần số học mà ít người có được. Mũi tên này được kết hợp bởi 3">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="78.0" text="yếu tố là sự sáng tạo (số 6), sự tự do (số 5) và trí não (số 4), tạo nên một sự cân bằng cần thiết cho con người.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="108.0" text="Tuy nhiên, những người có mũi tên này lại ít khi phát hiện ra được điểm mạnh của mình. Đây cũng là nhược điểm mà họ cần khắc phục để">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="158.0" text="Nếu mũi tên trống xuất hiện ở ô 4 – 5 – 6 bạn có khả năng sẽ là người thiếu ý chí và hay ỷ lại vào người khác, dẫn đến việc bạn có thể gặp">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="128.0" text="có thể vượt qua được những trở ngại của cuộc sống và đạt được mục tiêu của bản thân.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="178.0" text="phải nhiều khó khăn lớn trong cuộc sống và làm mất cơ hội đạt được ước mơ của mình.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                               </children>
+                           </AnchorPane>
+                           <AnchorPane fx:id="Mui_7_8_9" layoutX="-10.0" layoutY="3825.0" prefHeight="186.0" prefWidth="920.0">
+                               <children>
+                                   <Label layoutX="14.0" layoutY="14.0" text="Mũi tên 7-8-9 (mũi tên hoạt động – mũi tên trống thụ động)">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="58.0" text="Mũi tên cuối cùng trong các mũi tên thần số học là mũi tên hoạt động, thể hiện nguồn năng lượng mạnh mẽ trong con người của bạn. Ý ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="78.0" text="nghĩa mũi tên trong thần số học này cũng có thể khiến bạn bị mắc chứng hồi hộp quá mức, dễ gây ra nhiều bệnh lý khác nhau. Để khắc">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="98.0" text="phục điều này, bạn nên dành nhiều thời gian để học cách thư giãn, giải tỏa áp lực của cuộc sống.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="148.0" text="phát triển bản thân mình. Khi đó, bạn sẽ thiếu những trải nghiệm để có những bài học về sự trưởng thành.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="128.0" text="Ngược lại với mũi tên phía trên sẽ là mũi tên trống thụ động, giống như tên gọi, bạn là người rất lười vận động và thụ động trong cả việc">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                               </children>
+                           </AnchorPane>
+                           <AnchorPane layoutX="-10.0" layoutY="4005.0" prefHeight="1076.0" prefWidth="920.0">
+                               <children>
+                                   <Label layoutX="14.0" layoutY="14.0" text="Phương pháp khắc phục mũi tên trống trong thần số học">
+                                       <font>
+                                           <Font size="18.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="58.0" text="Khi đã biết được những ý nghĩa từ mũi tên thần số học, bạn sẽ hiểu được tầm quan trọng trong việc khắc phục những mũi tên trống và ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="78.0" text="và cách tính mũi tên thần số học. Cách khắc phục đơn giản nhất là nếu thiếu số nào, bạn hãy rèn luyện để bù đắp lại những thiếu sót đó ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="98.0" text="để biểu đồ thần số học của bạn được hoàn chỉnh nhất:">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Circle layoutX="44.0" layoutY="140.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle layoutX="44.0" layoutY="180.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle layoutX="44.0" layoutY="220.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle layoutX="44.0" layoutY="220.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle layoutX="44.0" layoutY="740.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle layoutX="44.0" layoutY="780.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle layoutX="44.0" layoutY="820.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle layoutX="44.0" layoutY="860.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Circle layoutX="44.0" layoutY="900.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Label layoutX="67.0" layoutY="130.0" text="Nếu thiếu số 1: Hãy học cách thể hiện quan điểm, chính kiến của mình. Thường xuyên viết nhật ký, đặt mục tiêu rõ ràng cho bản">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="67.0" layoutY="145.0" text="thân.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="67.0" layoutY="169.0" text="Nếu thiếu số 2: Hãy học cách lắng nghe suy nghĩ của khác. Thiền hoặc Yoga sẽ giúp bạn có một tâm hồn thanh tịnh hơn.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="67.0" layoutY="210.0" text="Nếu thiếu số 3: Hãy tham gia nhiều hơn vào các hoạt động sôi động.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <ImageView fitHeight="445.0" fitWidth="791.0" layoutX="66.0" layoutY="256.0">
+                                       <image>
+                                           <Image url="@../../../../../anhdownload/0bd9dba0dbf3f07605f72f43435e9dbe.jpg" />
+                                       </image>
+                                   </ImageView>
+                                   <Label layoutX="67.0" layoutY="730.0" text="Nếu thiếu số 4: Làm việc thực tế và cẩn thận hơn trong mọi việc.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="67.0" layoutY="770.0" text="Nếu thiếu số 5: Hãy thường xuyên đi du lịch khám phá những điều mới mẻ và kết giao thêm nhiều người bạn mới.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="67.0" layoutY="810.0" text="Nếu thiếu số 6: Hãy học cách yêu thương và chăm sóc những người thân xung quanh bạn.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Circle layoutX="44.0" layoutY="940.0" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                                   <Label layoutX="67.0" layoutY="850.0" text="Nếu thiếu số 7: Tham gia những hoạt động mà trước giờ chưa từng tham gia để tăng tính trải nghiệm cho bản thân nhé!">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="67.0" layoutY="890.0" text="Nếu thiếu số 8: Bạn có thể học thêm về mảng kinh doanh, bán hàng để tăng khả năng tư duy của mình.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="66.0" layoutY="930.0" text="Nếu thiếu số 9: Học cách cho đi và giúp đỡ người khác nhiều hơn nữa. Cố gắng đặt những mục tiêu lớn hơn và quyết tâm theo">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="66.0" layoutY="945.0" text="đuổi nó.">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="975.0" text="Con người sẽ luôn có những điểm mạnh, điểm yếu tồn tại bên trong họ. Những điều này được bộc lộ khi bạn tìm hiểu về mũi tên thần số ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="995.0" text="học. Hãy cố gắng phát huy những điểm mạnh và khắc phục những điểm yếu để đạt được những thành công lớn hơn trong sự nghiệp và ">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                                   <Label layoutX="14.0" layoutY="1015.0" text="cuộc sống bạn nhé!">
+                                       <font>
+                                           <Font size="14.0" />
+                                       </font>
+                                   </Label>
+                               </children>
+                           </AnchorPane>
+                       </children>
+                   </AnchorPane>
+               </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

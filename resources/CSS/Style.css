@@ -1,0 +1,105 @@
+#panel{
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+    -fx-border-radius: 5px;
+    -fx-background-radius: 9px;
+}
+
+#text{
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    /*-fx-background-color: #FFFFFF88;*/
+
+}
+#text:hover{
+    -fx-border-color: #330066;
+}
+
+
+#button {
+    -fx-border-radius: 45px;
+    -fx-background-radius: 15px;
+    -fx-background-color: rgb(151, 95, 255);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgb(210, 187, 253), 10, 0.5 , 0 , 5);
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+
+#button:hover{
+    -fx-border-radius: 45px;
+    -fx-background-color: rgb(150, 95, 255);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgb(210, 187, 253), 10, 0.5 , 0 , 5);
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+
+#button:armed{
+    -fx-border-radius: 45px;
+    -fx-background-color: rgb(135, 80, 250);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgb(210, 180, 223), 10, 0.8 , 0 , 5);
+}
+
+.menu-button, .menu1, .menu2, .menu3 {
+    -fx-background-color: linear-gradient(to bottom, #4A148C 0%, #9C27B0 100%), #f0f0f0;
+    -fx-background-radius: 5;
+    -fx-border-color: linear-gradient(to bottom, #4A148C 0%, #9C27B0 100%), #f0f0f0;
+    -fx-border-width: 0px;
+    -fx-max-width: 500px;
+}
+
+.menu-button .label, .menu1 .label, .menu2 .label, .menu3 .label {
+    -fx-text-fill: #FFFFFF;
+}
+
+.menu-item, .menu1, .menu2, .menu3 {
+    -fx-background-color: linear-gradient(to bottom, #4A148C 0%, #9C27B0 100%);
+}
+
+.menu-item:hover, .menu1:hover, .menu2:hover, .menu3:hover {
+    -fx-background-color: linear-gradient(to bottom, #7B1FA2 0%, #4A148C 100%);
+}
+
+.separator-menu-item {
+    -fx-border-color: transparent transparent #CCCCCC transparent;
+    -fx-border-width: 1px;
+}
+
+.head {
+    -fx-background-color: linear-gradient(to bottom, #4B0082, rgba(0, 0, 0, 0.7)); /* Gradient từ màu tím đến màu đen với độ trong suốt */
+}
+
+/* Trong file CSS của ứng dụng JavaFX */
+
+.menu-item {
+    /* Đặt chiều cao của menu bar */
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    /* Đặt ảnh làm nền */
+    -fx-background-image: url('https://tracuuthansohoc.com/wp-content/themes/devvn-child/images/bg_mobile_menu.jpg');
+    /* Đặt kích thước và kiểu căn chỉnh cho hình nền */
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    /* Xóa padding để ảnh nền chiếm toàn bộ không gian của menu */
+    -fx-padding: 0;
+}
+
+/* Thiết lập các tính chất cho các menu items (tuỳ chọn) */
+.menu-item {
+    /* Thêm màu chữ */
+    -fx-text-fill: white;
+    /* Thêm padding */
+    -fx-padding: 5 10;
+}
+
+#menu{
+-fx-background-color: transparent;
+ }
+
+
+
+
+
+

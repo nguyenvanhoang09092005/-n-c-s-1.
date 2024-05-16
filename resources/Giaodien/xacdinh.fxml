@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1093.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.doancoso1.Giaodien.xacdinh">
+   <children>
+      <Hyperlink layoutX="1018.0" layoutY="2.0" onAction="#back1" prefHeight="30.0" prefWidth="67.0" text="Quay lại" />
+      <ScrollPane layoutY="38.0" prefHeight="700.0" prefWidth="1093.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3000.0" prefWidth="1093.0">
+               <children>
+                  <Label layoutX="70.0" layoutY="31.0" prefHeight="54.0" prefWidth="953.0" text="Cách xác định các mũi tên trong Thần số học đơn giản nhất" textFill="#99167f">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="70.0" layoutY="123.0" text="Các yếu tố chính giúp tạo nên các mũi tên thần số học bao gồm ngày sinh và tên gọi thường xuyên của bạn, thông qua đó ta">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="70.0" layoutY="143.0" text="có thể xác định được ý nghĩa của mỗi mũi tên trong biểu đồ. Có 4 bước để xác định được các mũi tên trong Thần số học.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="70.0" layoutY="189.0" text="Bước 1: Vẽ một bảng gồm 9 ô như hình ô trống dưới đây.">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-59.00000762939453" endY="-1.52587890625E-5" layoutX="171.0" layoutY="210.0" startX="-100.0" />
+                  <AnchorPane layoutX="374.0" layoutY="244.0" prefHeight="114.0" prefWidth="114.0" styleClass="vuong" stylesheets="@../CSS/Style1.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7db80" height="115.0" stroke="BLACK" strokeType="INSIDE" styleClass="vuong" width="115.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="489.0" layoutY="244.0" prefHeight="114.0" prefWidth="114.0" styleClass="vuong" stylesheets="@../CSS/Style1.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7db80" height="115.0" stroke="BLACK" strokeType="INSIDE" styleClass="vuong" width="115.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="374.0" layoutY="358.0" prefHeight="114.0" prefWidth="114.0" styleClass="vuong" stylesheets="@../CSS/Style1.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7db80" height="115.0" stroke="BLACK" strokeType="INSIDE" styleClass="vuong" width="115.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="489.0" layoutY="359.0" prefHeight="114.0" prefWidth="114.0" styleClass="vuong" stylesheets="@../CSS/Style1.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7db80" height="115.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" styleClass="vuong" width="115.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="604.0" layoutY="244.0" prefHeight="114.0" prefWidth="114.0" styleClass="vuong" stylesheets="@../CSS/Style1.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7db80" height="115.0" stroke="BLACK" strokeType="INSIDE" styleClass="vuong" width="115.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="604.0" layoutY="358.0" prefHeight="114.0" prefWidth="114.0" styleClass="vuong" stylesheets="@../CSS/Style1.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7db80" height="115.0" stroke="BLACK" strokeType="INSIDE" styleClass="vuong" width="115.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="374.0" layoutY="473.0" prefHeight="114.0" prefWidth="114.0" styleClass="vuong" stylesheets="@../CSS/Style1.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7db80" height="115.0" stroke="BLACK" strokeType="INSIDE" styleClass="vuong" width="115.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="489.0" layoutY="473.0" prefHeight="114.0" prefWidth="114.0" styleClass="vuong" stylesheets="@../CSS/Style1.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7db80" height="115.0" stroke="BLACK" strokeType="INSIDE" styleClass="vuong" width="115.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="604.0" layoutY="473.0" prefHeight="114.0" prefWidth="114.0" styleClass="vuong" stylesheets="@../CSS/Style1.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d7db80" height="115.0" stroke="BLACK" strokeType="INSIDE" styleClass="vuong" width="115.0" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="436.0" layoutY="618.0" text="Bảng xây dựng biểu đồ Thần số học">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="70.0" layoutY="663.0" text="Bước 2: Viết tên của bạn quy đổi chúng thành hệ thống số Pythagoras và điền các SỐ XUẤT HIỆN TRONG TÊN vào lưới ở">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="126.0" layoutY="683.0" text="bước 1, theo vị trí từ 1 đến 9 như bảng sau:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-59.00000762939453" endY="-1.52587890625E-5" layoutX="171.0" layoutY="684.0" startX="-100.0" />
+                  <ImageView fitHeight="396.0" fitWidth="700.0" layoutX="305.0" layoutY="730.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../anhdownload/Screenshot%202024-05-10%20154112.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="70.0" layoutY="1153.0" text="Ví dụ: Bạn tên là CHÂU ANH, trước tên ta sẽ quy đổi tên sang hệ thống số Pythagoras">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="70.0" layoutY="1173.0" prefHeight="75.0" prefWidth="629.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="C">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="102.0" layoutY="14.0" text="H">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="200.0" layoutY="14.0" text="A">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="296.0" layoutY="14.0" text="U">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="394.0" layoutY="14.0" text="A">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="484.0" layoutY="14.0" text="N">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="577.0" layoutY="14.0" text="H">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="102.0" layoutY="39.0" text="8">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="508.20001220703125" layoutX="101.0" layoutY="38.0" startX="-100.0" />
+                        <Label layoutX="14.0" layoutY="39.0" text="3">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="200.0" layoutY="39.0" text="1">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="296.0" layoutY="39.0" text="3">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="394.0" layoutY="39.0" text="1">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="485.0" layoutY="39.0" text="5">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="577.0" layoutY="39.0" text="8">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="70.0" layoutY="1243.0" text="Điền vào bảng ở bước 1 ta được biểu đồ tên như sau:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="399.0" fitWidth="410.0" layoutX="300.0" layoutY="1280.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../anhdownload/Screenshot%202024-05-10%20161844.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="70.0" layoutY="1700.0" text="Bước 3: Viết các số trong ngày sinh của bạn vào lưới ở bảng 1, theo vị trí từ 1 đến 9 như bảng của bước 2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="70.0" layoutY="1735.0" text="Note: Trường hợp con số ngày sinh trùng nhau với con số xuất hiện trong tên, ta tiếp tục ghi thêm số trùng lặp này vào ô của con số đó.">
+                     <font>
+                        <Font name="System Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="70.0" layoutY="1770.0" text="Ví dụ: Bạn tên là CHÂU ANH, sinh ngày 27/06/2003, ta sẽ có biểu đồ Thần số học kết hợp ngày sinh và tên của bạn.">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="423.0" fitWidth="467.0" layoutX="275.0" layoutY="1790.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../anhdownload/Screenshot 2024-05-10 163900.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="70.0" layoutY="2230.0" text="Bước 4: Vẽ các mũi tên trong Thần số học dọc, chéo hoặc ngang vào biểu đồ, bằng cách ghép đủ 3 số trong ô vuông. ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="126.0" layoutY="2250.0" text="Tham khảo bảng ví dụ dưới đây:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-59.00000762939453" endY="-1.52587890625E-5" layoutX="171.0" layoutY="684.0" startX="-100.0" />
+                  <ImageView fitHeight="423.0" fitWidth="467.0" layoutX="275.0" layoutY="2270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../anhdownload/Screenshot 2024-05-10 164358.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="70.0" layoutY="2700.0" text="Vậy thông qua biểu đồ Thần số học, ta thấy bạn Châu Anh, sinh ngày 27/06/2003 có 3 mũi tên gồm: trục 357, trục 258, trục 123">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,76 @@
+
+#avatar {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-border-color: #CCCCCC; /* Màu viền */
+    -fx-border-width: 2px; /* Độ dày viền */
+}
+
+.panel{
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+    -fx-border-radius: 5px;
+    -fx-background-radius: 9px;
+}
+
+.panel1{
+-fx-background-color:#9873AB
+}
+
+.panel3 {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 1);
+    -fx-background-color:#FFFF00;
+    -fx-transition: transform 0.2s ease-in-out;
+}
+
+
+.panel4 {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 1);
+    -fx-background-color:#0099FF;
+    -fx-transition: transform 0.2s ease-in-out;
+}
+
+
+.panel5 {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 1);
+    -fx-background-color:#FF33FF;
+    -fx-transition: transform 0.2s ease-in-out;
+}
+
+.panel6 {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 1);
+    -fx-background-color: #666699;
+    -fx-transition: transform 0.2s ease-in-out;
+}
+
+.panel7 {
+   -fx-background-color:#66FFCC;
+}
+
+.panel3-anh {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 1);
+    -fx-transition: transform 0.2s ease-in-out;
+}
+
+.panel3-anh:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-translate-z: 10;
+    -fx-background-radius: 10;
+}
+
+.panel7-1, .panel7-2, .panel7-3, .panel7-4, .panel7-5, .panel6-1, .panel3-1, .panel4-1, .panel5-1, .vuong{
+-fx-transition: transform 0.2s ease-in-out;
+}
+
+.panel7-1:hover , .panel7-2:hover, .panel7-3:hover, .panel7-4:hover, .panel7-5:hover, .panel6-1:hover, .panel3-1:hover, .panel4-1:hover, .panel5-1:hover , .vuong:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-translate-z: 10;
+    -fx-background-radius: 10;
+}
+
+.check{
+-fx-background-color: transparent;
+ -fx-border-color: transparent;
+}
+

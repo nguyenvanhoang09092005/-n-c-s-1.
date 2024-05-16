@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1093.0" styleClass="Panel" stylesheets="@../CSS/Style1.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.doancoso1.Giaodien.Home">
+    <children>
+      <AnchorPane prefHeight="30.0" prefWidth="1094.0" styleClass="head" stylesheets="@../CSS/Style.css">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="200.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="V_RESIZE" />
+               </cursor>
+               <effect>
+                  <Blend />
+               </effect>
+               <image>
+                  <Image url="@../../../../../anhdownload/z5407069260900_daec09f09cd7ef68b47cf61cf08089e8.jpg" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="353.0" layoutY="3.0" onAction="#home" text="Home" textFill="#101010">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <MenuButton id="menu" layoutX="428.0" layoutY="1.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Về">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#gioithieu" styleClass="menu2" text="Giới thiệu" />
+                <MenuItem mnemonicParsing="false" onAction="#lienhe" styleClass="menu2" text="Liên hệ" />
+              </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <MenuButton id="menu" layoutX="493.0" layoutY="-1.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Tra cứu">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#tracuu1" styleClass="menu2" text="Tra cứu thần số học" />
+                  <MenuItem mnemonicParsing="false" onAction="#tracuu2" styleClass="menu2" text="Tra cứu thần số học cho con" />
+                  <MenuItem mnemonicParsing="false" onAction="#tracuu3" onMenuValidation="#tracuuDISc" styleClass="menu2" text="Tra cứu DISC" />
+                  <MenuItem mnemonicParsing="false" onAction="#tracuu4" onMenuValidation="#tracuuMBTI" styleClass="menu2" text="Tra cứu MBTI" />
+              </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <MenuButton id="menu" layoutX="600.0" layoutY="1.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Dịch vụ">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#danhxung" styleClass="menu2" text="Đặt tên danh xưng" />
+                  <MenuItem mnemonicParsing="false" onAction="#khaisinh" styleClass="menu2" text="Đặt tên khai sinh" />
+              </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <MenuButton id="menu" layoutX="708.0" mnemonicParsing="false" stylesheets="@../CSS/Style.css" text="Blog">
+               <items>
+                  <Menu mnemonicParsing="false" styleClass="menu2" text="Kiến Thức Thần Số Học">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#cacchiso" text="Cácchỉ số" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" styleClass="menu2" text="Ý Nghĩa Các Con Số">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#so1" styleClass="menu3" text="Thần số học số 1" />
+                        <MenuItem mnemonicParsing="false" onAction="#so2" styleClass="menu3" text="Thần số học số 2" />
+                        <MenuItem mnemonicParsing="false" onAction="#so3" styleClass="menu3" text="Thần số học số 3" />
+                        <MenuItem mnemonicParsing="false" onAction="#so4" styleClass="menu3" text="Thần số học số 4" />
+                        <MenuItem mnemonicParsing="false" onAction="#so5" styleClass="menu3" text="Thần số học số 5" />
+                        <MenuItem mnemonicParsing="false" onAction="#so6" styleClass="menu3" text="Thần số học số 6" />
+                        <MenuItem mnemonicParsing="false" onAction="#so7" styleClass="menu3" text="Thần số học số 7" />
+                        <MenuItem mnemonicParsing="false" onAction="#so8" styleClass="menu3" text="Thần số học số 8" />
+                        <MenuItem mnemonicParsing="false" onAction="#so9" styleClass="menu3" text="Thần số học số 9" />
+                        <MenuItem mnemonicParsing="false" onAction="#so10" styleClass="menu3" text="Thần số học số 10" />
+                        <MenuItem mnemonicParsing="false" onAction="#so11" styleClass="menu3" text="Thần số học số 11" />
+                        <MenuItem mnemonicParsing="false" onAction="#so22" styleClass="menu3" text="Thần số học số 22" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" styleClass="menu2" text="Cung Hoàng Đạo">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#cunghoangdao" styleClass="menu3" text="12 cung hoàng đạo" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" styleClass="menu2" text="Đặt Tên">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ynghiaten" styleClass="menu3" text="Xem ý nghĩa tên" />
+                        <MenuItem mnemonicParsing="false" onAction="#dattencontrai" styleClass="menu3" text="Đặt tên con trai" />
+                        <MenuItem mnemonicParsing="false" onAction="#dattencongai" styleClass="menu3" text="Đặt tên con gái" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" styleClass="menu2" text="Bói Tình Yêu">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#boity1" styleClass="menu3" text="Bói tình yêu theo cung hoàng đạo" />
+                        <MenuItem mnemonicParsing="false" onAction="#boity2" styleClass="menu3" text="Bói tử vi tình yêu" />
+                        <MenuItem mnemonicParsing="false" onAction="#boity3" styleClass="menu3" text="Bói đường tình duyên" />
+                        <MenuItem mnemonicParsing="false" onAction="#boity4" styleClass="menu3" text="Bói tình yêu bằng tên trên giấy" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" onMenuValidation="#DISC" styleClass="menu2" text="DISC">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#nhomD" styleClass="menu3" text="Nhóm tính cách D" />
+                        <MenuItem mnemonicParsing="false" onAction="#nhomI" styleClass="menu3" text="Nhóm tính cách I" />
+                        <MenuItem mnemonicParsing="false" onAction="#nhomS" styleClass="menu3" text="Nhóm tính cách S" />
+                        <MenuItem mnemonicParsing="false" onAction="#nhomC" styleClass="menu3" text="Nhóm tính cách C" />
+                     </items>
+                  </Menu>
+               </items>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </MenuButton>
+            <Hyperlink fx:id="thongtin1" layoutX="792.0" layoutY="3.0" onAction="#thongtin" text="Thông tin" textFill="#1b1a1a">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink layoutX="1002.0" layoutY="8.0" onAction="#dangxuat" text="Đăng Xuất" />
+            <Button layoutX="914.0" layoutY="8.0" mnemonicParsing="false" onAction="#search" text="Button" />
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutY="38.0" prefHeight="703.0" prefWidth="1093.0">
+         <content>
+            <AnchorPane prefHeight="3000.0" prefWidth="1093.0" styleClass="panel_home" stylesheets="@../CSS/Style.css">
+               <children>
+                  <ImageView fitHeight="540.0" fitWidth="1094.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IMG/istockphoto-1217191908-170667a.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="112.0" layoutY="177.0" text="TRA CỨU THẦN SỐ HỌC" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="121.0" layoutY="231.0" text="KHÁM PHÁ BẢN THÂN." textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="57.0" layoutY="401.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.24621212121212122" startX="0.3607954545454545">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.43362000584602356" green="0.14579999446868896" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.1769590675830841" green="0.5948947072029114" blue="0.9368420839309692" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="342.0" layoutY="401.0" stroke="BLACK" strokeType="INSIDE" width="200.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.24621212121212122" startX="0.3607954545454545">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.43362000584602356" green="0.14579999446868896" blue="0.8100000023841858" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.1769590675830841" green="0.5948947072029114" blue="0.9368420839309692" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Text fx:id="luotTraCuu" fill="#faf6f6" fontSmoothingType="LCD" layoutX="70.0" layoutY="433.0" strokeMiterLimit="25.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="173.34738159179693">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="95.0" layoutY="440.0" text="LƯỢT TRA CỨU" textFill="#e7e3e3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="381.0" layoutY="440.0" text="LƯỢT ĐĂNG KÝ " textFill="#e7e3e3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="luotDangKy" fill="#faf6f6" fontSmoothingType="LCD" layoutX="359.0" layoutY="432.0" strokeMiterLimit="25.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="173.34738159179693">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="48.0" layoutY="560.0" prefHeight="119.0" prefWidth="920.0">
+                     <children>
+                        <Label layoutX="56.0" layoutY="21.0" text="Những nghiên cứu về Thần số học Pitago của Thầy Louis Nguyễn đang mang đến một làn sóng tích cực trong đại chúng Việt Nam.">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="56.0" layoutY="41.0" text="Không chỉ là các phân tích để giúp mỗi người tìm ra những tiềm năng thực sự và trả lời được câu hỏi mình là ai trong cuộc đời này,">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="48.0" layoutY="61.0" text="những nghiên cứu sâu và rộng khắp các lĩnh vực của thầy còn giúp hàng triệu người lựa chọn được con đường đi đúng đắn, giúp cho">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="65.0" layoutY="81.0" text="những người làm kinh doanh tìm ra định hướng phù hợp trong chiến lược và trong quản trị doanh nghiệp, quan hệ khách hàng.">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="79.0" layoutY="692.0" prefHeight="551.0" prefWidth="920.0">
+                     <children>
+                        <Label layoutX="150.0" layoutY="14.0" text="CÔNG CỤ XEM THẦN SỐ HỌC ONLINE">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="46.0" layoutY="81.0" text="Họ tên khai sinh:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="46.0" layoutY="163.0" text="Tên thường dùng nếu có (VD: Louis Nguyen,...)">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="46.0" layoutY="250.0" text="Ngày/tháng/năm sinh dương lịch:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstName" layoutX="46.0" layoutY="112.0" prefHeight="39.0" prefWidth="819.0" promptText="Nhập họ tên">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="lastName" layoutX="46.0" layoutY="191.0" prefHeight="39.0" prefWidth="534.0" promptText="Nhập tên thường dùng">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="gioiTinh" editable="true" layoutX="622.0" layoutY="191.0" prefHeight="39.0" prefWidth="242.0" promptText="Giới tính" />
+                        <DatePicker fx:id="data" layoutX="46.0" layoutY="284.0" prefHeight="39.0" prefWidth="819.0" />
+                        <VBox fx:id="vbox2" layoutX="46.0" layoutY="334.0" prefHeight="102.0" prefWidth="380.0">
+                           <children>
+                              <CheckBox fx:id="checkbox2" mnemonicParsing="false" prefHeight="34.0" prefWidth="378.0" text="Xem cả số điện thoại hợp">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                              <AnchorPane prefHeight="69.0" prefWidth="434.0">
+                                 <children>
+                                    <TextField fx:id="sodienthoai" layoutY="14.0" prefHeight="39.0" prefWidth="378.0" promptText="Nhập số điện thoại">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="vbox1" layoutX="460.0" layoutY="334.0" prefHeight="136.0" prefWidth="390.0">
+                           <children>
+                              <CheckBox fx:id="checkbox1" mnemonicParsing="false" prefHeight="34.0" prefWidth="378.0" text=" Xem tương hợp tình duyên, hôn nhân">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                              <AnchorPane prefHeight="109.0" prefWidth="378.0">
+                                 <children>
+                                    <TextField fx:id="firstName1" layoutY="14.0" prefHeight="39.0" prefWidth="402.0" promptText="Nhập họ tên của người yêu/vợ/chồng">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <DatePicker fx:id="date1" layoutY="68.0" prefHeight="39.0" prefWidth="402.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                        <Button fx:id="tra" layoutX="46.0" layoutY="511.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="819.0" text="Tra cứu ngay" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="87.0" layoutY="1292.0" prefHeight="406.0" prefWidth="920.0">
+                     <children>
+                        <TextArea fx:id="comment" layoutX="48.0" layoutY="15.0" prefHeight="38.0" prefWidth="351.0" promptText="Viết bình luận..." />
+                        <Button layoutX="399.0" layoutY="14.0" mnemonicParsing="false" onAction="#gui" prefHeight="38.0" prefWidth="45.0" />
+                        <ImageView fitHeight="25.0" fitWidth="45.0" layoutX="399.0" layoutY="21.0">
+                           <image>
+                              <Image url="@../IMG/icons8-send-50.png" />
+                           </image>
+                        </ImageView>
+                        <ScrollPane layoutX="47.0" layoutY="73.0" prefHeight="314.0" prefWidth="819.0">
+                           <content>
+                              <AnchorPane fx:id="panel_comment" prefHeight="312.0" prefWidth="822.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+
+               </children></AnchorPane>
+
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>
